@@ -1,2 +1,4 @@
 # pedidos
-Página de pedidos ocm HTML, CSS e Bootstrap
+Página de Pedidos Online com HTML, CSS e Bootstrap
+
+Necessário a instalação do MySQL, PHP e Apache.
