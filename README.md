@@ -1,4 +1,4 @@
 # pedidos
-Página de Pedidos Online com HTML, CSS e Bootstrap
+Página de Validação de Pedidos com HTML, CSS e Bootstrap
 
-Necessário a instalação do MySQL, PHP e Apache.
+
