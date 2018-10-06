@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <!--
+        <meta http-equiv="Contet-type" content="text/html; charset=utf-8">
+    -->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <title>Pedido de Compras</title>
+</head>
+<style>
+    .color-tess {
+        background-color: #ffa270;
+    }
+
+    .subcolor-tess {
+        background-color: #ffbb93;
+    }
+
+    .largura {
+        width: 800px;
+        margin: auto;
+    }
+
+    .largform {
+        width: 90%;
+        margin: auto;
+    }
+
+    .btn {
+        width: 200px;
+        height: 40px;
+    }
+
+    .rodape {
+        color: #BBB;
+        display: none;
+    }
+    @media only screen and (max-width: 900px) {
+	    /* For mobile phones: */
+	    .largura {
+	        width: 100%;
+	    }
+	    .btn {
+	    	width: 45%;
+	    }
+        .col-md-2 {
+            text-align: left;
+        }
+        .img-responsive {
+            height: 60px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .apaga-borda{
+             overflow:hidden;
+        }
+	}
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                </br>
+                <img src="http://s2holding.com.br/kenner2018.png" class="img-responsive text-center" alt="Responsive image">
+            </div>
+            <div class="col-md-10">
+                <h2 class="text-center">TESS INDUSTRIA</h2>
+                <h4 class="text-center">Aprovação do Pedido de Compra</h4>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-right">
+            <div class="col-md-10">Número Pedido:</div>
+            <div class="col-md-1">
+                <strong>%Wnumpc%</strong>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row text-right">
+            <div class="col-md-10">Data Emissão:</div>
+            <div class="col-md-1">
+                <strong>%Wdata%</strong>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1">Comprador:</div>
+            <div class="col-md-3">
+                <strong>%Wusuario%</strong>
+            </div>
+
+            <div class="col-md-2 text-right">Cond. de Pagto:</div>
+            <div class="col-md-5 ">
+                <strong>%WcondPagto%</strong>
+            </div>
+        </div>
+        <div class="row text-left">
+            <div class="col-md-1"></div>
+            <div class="col-md-1">Fornecedor:</div>
+            <div class="col-md-3">
+                <strong>%Wcodfor%</strong>
+            </div>
+            <div class="col-md-2 text-right">Loja:</div>
+            <div class="col-md-5">
+                <strong>%Wnomefor%</strong>
+            </div>
+        </div>
+        <hr>
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">
+                <strong>Itens do Pedido</strong>
+            </div>
+            <div class="table-responsive">
+	            <table class="table table-hover">
+	                <thead class="thead-light color-tess">
+	                    <tr>
+	                        <th>Item</th>
+	                        <th>Produto</th>
+	                        <th>Descrição</th>
+	                        <th>CC</th>
+	                        <th>Conta</th>
+	                        <th>CLVL</th>
+	                        <th>UM</th>
+	                        <th>Quantidade</th>
+	                        <th>Valor Unitário</th>
+	                        <th>Valor Total</th>
+	                        <th>Data Entrega</th>
+	                        <th>Observação</th>
+	                    </tr>
+	                </thead>
+	                <tbody>
+	                    <tr>
+                            <th>
+	                           %Witprod%
+                            </th>
+	                    </tr>
+	                </tbody>
+	                <thead class="thead-light subcolor-tess">
+	                    <tr>
+	                        <th>Total do Pedido</th>
+	                        <th></th>
+	                        <th></th>
+	                        <th></th>
+	                        <th></th>
+	                        <th></th>
+	                        <th></th>
+	                        <th></th>
+	                        <th></th>
+	                        <th>%TOTPED%</th>
+	                        <th></th>
+	                        <th></th>
+	                    </tr>
+	                </thead>
+	            </table>
+	        </div>
+        </div>
+        <hr>
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">
+                <strong>Orçamento</strong>
+            </div>
+            <div class="table-responsive">
+	            <table class="table table-info">
+	                <thead class="thead-light color-tess">
+	                    <tr>
+	                        <th>CC</th>
+	                        <th>Descrição</th>
+	                        <th>Pacote</th>
+	                        <th>Período</th>
+	                        <th>Orçado</th>
+	                        <th>Realizado</th>
+	                        <th>Saldo</th>
+	                    </tr>
+	                </thead>
+	                <tbody>
+	                    <tr>
+	                        <td>%Orcado%</td>
+	                        <td></td>
+	                        <td></td>
+	                        <td></td>
+	                        <td></td>
+	                        <td></td>
+	                        <td></td>
+	                    </tr>
+	                </tbody>
+	            </table>
+	        </div>
+        </div>
+        <hr>
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">
+                <strong>Aprovador(es)</strong>
+            </div>
+            <div class="table-responsive">
+	            <table class="table table-info">
+	                <thead class="thead-light color-tess">
+	                    <tr>
+	                        <th>Código</th>
+	                        <th>Nome</th>
+	                        <th>Status</th>
+	                        <th>Data da Aprovação</th>
+	                        <th>Observação</th>
+	                    </tr>
+	                </thead>
+	                <tbody>
+	                    <tr>
+                            <th class="apaga-borda">
+                                %Witaprov%
+                            </th>
+	                    </tr>
+	                </tbody>
+	            </table>
+	        </div>
+        </div>
+        
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <strong>Aprovação</strong>
+                </div>
+                <div class="largform">
+                    <form act="mailto:%WFMailTo%" action="WFHTTPRET.APL" method="post" name="FrontPage_Form1">
+                        <div class="row text-center">
+                            <div class="radio">
+                                <label class="radio-inline">
+                                    <input type="radio" name="%RBAPROVA%" id="OpcionSim" value="SIM" checked> Sim
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="%RBAPROVA%" id="OpcionNao" value="NAO"> Não
+                                </label>
+                            </div>
+                        </div>
+                        <div class="h4">Observações</div>
+                        <textarea class="form-control textarea" rows="3">%OBS%</textarea>
+                        <p>
+                            <div class="row text-center">
+                                <input type="submit" class="btn btn-default" name="btnLimpar" value="Limpar" id="btnLimpar">
+                                <input type="submit" class="btn btn-primary" name="btnEnviar" value="Enviar" id="btnEnviar">
+                            </div>
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+        
+        <div class="text-center rodape">
+            %Wordem% %Wchave% %chave% %WAprov% %GrpAprv% %Pedido% %Wfilial% %CodFil% %Usuario% %Wfilial% %Wtipo%
+        </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
+<html>
